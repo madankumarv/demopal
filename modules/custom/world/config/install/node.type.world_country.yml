@@ -1,6 +1,11 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - world
+  enforced:
+    module:
+      - world
 name: Country
 type: country
 description: 'Use <em>country</em> to get country informations in details.'
