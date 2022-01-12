@@ -1,0 +1,11 @@
+# /modules/custom/world/config/schema/world.schema.yml
+world.settings:
+  type: config_object
+  label: 'World config'
+  mapping:
+    country:
+      type: text
+      label: 'Country'
+    capital:
+      type: text
+      label: 'Capital'
