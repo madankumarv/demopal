@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: { }
-id: node.country.capital
+id: node.world.capital
 field_name: capital
 entity_type: node
 type: string_long
