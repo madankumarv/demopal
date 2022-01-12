@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - field.storage.node.capital
-    - node.type.world
-id: node.world.capital
+    - node.type.world_country
+id: node.world_country.capital
 field_name: capital
 entity_type: node
 bundle: world
