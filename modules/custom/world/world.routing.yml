@@ -1,4 +1,4 @@
-example.my_page:
+world.countries:
   path: '/world/countries'
   defaults:
     _controller: '\Drupal\world\Controller\WorldController::countries'
