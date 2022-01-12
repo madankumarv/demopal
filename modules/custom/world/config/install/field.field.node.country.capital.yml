@@ -3,11 +3,11 @@ status: true
 dependencies:
   config:
     - field.storage.node.capital
-    - node.type.country
-id: node.country.capital
+    - node.type.world
+id: node.world.capital
 field_name: capital
 entity_type: node
-bundle: country
+bundle: world
 label: 'Capital'
 description: 'Capital of the Country.'
 required: false
