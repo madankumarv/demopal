@@ -1,0 +1,7 @@
+example.my_page:
+  path: '/world/countries'
+  defaults:
+    _controller: '\Drupal\world\Controller\WorldController::countries'
+    _title: 'List of countries in the world!'
+  requirements:
+    _permission: 'access content'
