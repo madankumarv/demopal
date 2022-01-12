@@ -1,0 +1,7 @@
+name: World Module
+description: Creates a page showing "World".
+package: Custom
+
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
