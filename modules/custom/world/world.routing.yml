@@ -5,3 +5,11 @@ world.countries:
     _title: 'List of countries in the world!'
   requirements:
     _permission: 'access content'
+
+world.form:
+  path: '/world-form'
+  defaults:
+    _title: 'World form'
+    _form: '\Drupal\world\Form\WorldForm'
+  requirements:
+    _permission: 'access content'
