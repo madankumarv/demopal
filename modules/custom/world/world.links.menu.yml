@@ -1,0 +1,5 @@
+world.admin.settings:
+  title: 'World Settings'
+  description: 'Configure settings for the World module.'
+  route_name: world.admin.settings
+  parent: 'system.admin_config_development'
