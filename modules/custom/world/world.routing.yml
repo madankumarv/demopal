@@ -7,9 +7,17 @@ world.countries:
     _permission: 'access content'
 
 world.form:
-  path: '/world-form'
+  path: '/world/form/counytry'
   defaults:
     _title: 'World form'
     _form: '\Drupal\world\Form\WorldForm'
   requirements:
     _permission: 'access content'
+
+world.admin_settings:
+  path: '/admin/config/world'
+  defaults:
+    _form: '\Drupal\your_module\Form\WorldConfigurationForm'
+    _title: 'World configuration screen'
+  requirements:
+    _permission: 'administer site configuration'
