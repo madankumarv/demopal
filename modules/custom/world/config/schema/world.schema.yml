@@ -6,4 +6,7 @@ world.settings:
     count:
       type: text
       label: 'Countries Count'
+    countries:
+      type: text
+      label: 'Countries'
       
