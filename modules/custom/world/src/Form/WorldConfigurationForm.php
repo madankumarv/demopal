@@ -31,10 +31,10 @@ class WorldConfigurationForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('world.settings');
-    $form['your_message'] = [
+    $form['count'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Your message'),
-      '#default_value' => $config->get('variable_name'),
+      '#title' => $this->t('Countries Count'),
+      '#default_value' => $config->get('count'),
     ];
     return parent::buildForm($form, $form_state);
   }
@@ -43,8 +43,8 @@ class WorldConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->config('your_module.settings')
-      ->set('variable_name', $form_state->getValue('your_message'))
+    $this->config('world.settings')
+      ->set('count', $form_state->getValue('count'))
       ->save();
     parent::submitForm($form, $form_state);
   }
