@@ -1,4 +1,4 @@
-world.content.countries:
+world.countries.page:
   path: '/world/countries'
   defaults:
     _controller: '\Drupal\world\Controller\WorldController::countries'
@@ -6,7 +6,7 @@ world.content.countries:
   requirements:
     _permission: 'access content'
 
-world.form.countries:
+world.countries.form:
   path: '/world/countries/search'
   defaults:
     _title: 'Search World'
@@ -14,10 +14,10 @@ world.form.countries:
   requirements:
     _permission: 'access content'
 
-world.form.settings:
+world.config.form:
   path: '/admin/config/development/world'
   defaults:
     _form: '\Drupal\world\Form\WorldConfigurationForm'
-    _title: 'World configuration screen'
+    _title: 'World configuration Form'
   requirements:
     _permission: 'administer site configuration'
