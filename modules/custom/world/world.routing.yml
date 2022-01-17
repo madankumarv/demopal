@@ -17,7 +17,7 @@ world.form.countries:
 world.admin.settings:
   path: '/admin/config/world'
   defaults:
-    _form: '\Drupal\your_module\Form\WorldConfigurationForm'
+    _form: '\Drupal\world\Form\WorldConfigurationForm'
     _title: 'World configuration screen'
   requirements:
     _permission: 'administer site configuration'
