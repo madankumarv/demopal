@@ -14,7 +14,7 @@ world.form.countries:
   requirements:
     _permission: 'access content'
 
-world.admin.settings:
+world.form.settings:
   path: '/admin/config/development/world'
   defaults:
     _form: '\Drupal\world\Form\WorldConfigurationForm'
