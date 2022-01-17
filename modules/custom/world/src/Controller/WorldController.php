@@ -19,7 +19,7 @@ class WorldController extends ControllerBase {
     $config = \Drupal::config('world.settings');
     //Countries Count.
     $count = $config->get('world.count');
-    $countries = $config->get('world.count');
+    $countries = $config->get('world.countries');
     return [
       '#markup' => $count.":".$countries,
     ];
