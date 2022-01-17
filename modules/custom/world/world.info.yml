@@ -6,4 +6,4 @@ type: module
 core: 8.x
 core_version_requirement: ^8 || ^9
 
-configure: world.admin.settings
+configure: world.config.form

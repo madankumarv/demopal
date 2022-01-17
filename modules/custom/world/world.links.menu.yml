@@ -1,0 +1,5 @@
+world.config.form:
+  title: 'World Settings'
+  description: 'Configure settings for the World module.'
+  route_name: world.config.form
+  parent: 'system.admin_config_development'
