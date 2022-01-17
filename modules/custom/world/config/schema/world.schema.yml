@@ -3,9 +3,10 @@ world.settings:
   type: config_object
   label: 'World config'
   mapping:
-    country:
+    count:
       type: text
-      label: 'Country'
-    capital:
+      label: 'Countries Count'
+    countries:
       type: text
-      label: 'Capital'
+      label: 'Countries'
+      

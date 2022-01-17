@@ -14,9 +14,14 @@ class WorldController extends ControllerBase {
    * @return array
    *   A simple renderable array.
    */
-  public function countries() {
+  public function showCountries() {
+    // Default settings.
+    $config = \Drupal::config('world.settings');
+    //Countries Count.
+    $count = $config->get('world.count');
+    $countries = $config->get('world.count');
     return [
-      '#markup' => 'India,Nepal,Bhutan,Pakistan,Srilanka,Bangladesh,China,Mangolia,Burma,South Korea,North Korea,Singapore,Malaysia,Indonesia,Combodia,Honkong,Japan',
+      '#markup' => $count.":".$countries,
     ];
   }
 
