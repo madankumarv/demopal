@@ -22,7 +22,7 @@ class WorldForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form['country'] = [
-      '#type' => 'text',
+      '#type' => 'textfield',
       '#title' => $this->t('Enter a country to find'),
     ];
     $form['actions']['#type'] = 'actions';
