@@ -14,12 +14,12 @@ class WorldController extends ControllerBase {
    * @return array
    *   A simple renderable array.
    */
-  public function showCountries() {
+  public function countries() {
     // Default settings.
     $config = \Drupal::config('world.settings');
     //Countries Count.
     $count = $config->get('world.count');
-    $countries = $config->get('world.count');
+    $countries = $config->get('world.countries');
     return [
       '#markup' => $count.":".$countries,
     ];
