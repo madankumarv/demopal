@@ -49,8 +49,8 @@ class WorldForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $country = $form_state->getValue('country');
-    $config = explode(',',$this->config('world.settings'));
-    $message = in_array($country, $config->get('world.countries')) ? 'found.' : 'not found.';
+    $config = $this->config('world.settings');
+    $message = in_array($country, explode(',',$config->get('world.countries'))) ? 'found.' : 'not found.';
     $this->messenger()->addStatus('Specified country is '.$message);
   }
 
