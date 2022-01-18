@@ -20,7 +20,7 @@ class WorldController extends ControllerBase {
     $count = $config->get('world.count');
     $countries = explode(',',$config->get('world.countries'));
     $table = '<table>';
-    for($i=0;i $i< $count; $i++) {
+    for($i=0; $i<$count; $i++) {
       $table .= '<tr><td>'.($i+1).'</td><td>'.$countries[$i].'</td></tr>';
     }
     $table .= '</table>';
