@@ -21,9 +21,9 @@ class WorldForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['count'] = [
-      '#type' => 'number',
-      '#title' => $this->t('Enter no. of countries'),
+    $form['country'] = [
+      '#type' => 'text',
+      '#title' => $this->t('Enter a country to find'),
     ];
     $form['actions']['#type'] = 'actions';
     $form['actions']['submit'] = [
@@ -38,8 +38,8 @@ class WorldForm extends FormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    if (strlen($form_state->getValue('count')) < 1) {
-      $form_state->setErrorByName('count', $this->t('Please enter positive number!'));
+    if (ctype_alpha($form_state->getValue('country'))) {
+      $form_state->setErrorByName('country', $this->t('Please enter only alphabets!'));
     }
   }
 
@@ -47,10 +47,10 @@ class WorldForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $count = $form_state->getValue('count');
-    $world =  new WorldController;
-    $countries = explode(',',$world->countries()['#markup']);
-    $this->messenger()->addStatus(implode(',',array_slice($countries,0,$count)));
+    $country = $form_state->getValue('country');
+    $config = $this->config('world.settings');
+    $message = in_array($country, $config->get('world.countries')) ? 'found.' : 'not found.';
+    $this->messenger()->addStatus('Specified country is '.$message);
   }
 
 }
