@@ -17,11 +17,15 @@ class WorldController extends ControllerBase {
   public function countries() {
     // Default settings.
     $config = \Drupal::config('world.settings');
-    //Countries Count.
     $count = $config->get('world.count');
-    $countries = $config->get('world.countries');
+    $countries = explode(',',$config->get('world.countries'));
+    $table = '<table>';
+    for($i=0;i $i< $count; $i++) {
+      $table .= '<tr><td>'.($i+1).'</td><td>'.$countries[$i].'</td></tr>';
+    }
+    $table .= '</table>';
     return [
-      '#markup' => $count.":".$countries,
+      '#markup' => $table,
     ];
   }
 
