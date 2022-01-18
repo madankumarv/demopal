@@ -30,11 +30,22 @@ class WorldConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    // Form constructor.
+    $form = parent::buildForm($form, $form_state);
+    
     $config = $this->config('world.settings');
+    
     $form['count'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Countries Count'),
-      '#default_value' => $config->get('count'),
+      '#default_value' => $config->get('world.count'),
+    ];
+    
+    $form['countries'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('List of countries:'),
+      '#default_value' => $config->get('world.countries'),
+      '#description' => $this->t('Add countries as comma seperated.'),
     ];
     return parent::buildForm($form, $form_state);
   }
