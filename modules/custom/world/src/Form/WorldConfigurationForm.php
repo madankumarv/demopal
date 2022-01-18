@@ -47,7 +47,7 @@ class WorldConfigurationForm extends ConfigFormBase {
       '#default_value' => $config->get('world.countries'),
       '#description' => $this->t('Add countries as comma seperated.'),
     ];
-    return parent::buildForm($form, $form_state);
+    return $form;
   }
 
   /**
@@ -55,7 +55,8 @@ class WorldConfigurationForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->config('world.settings')
-      ->set('count', $form_state->getValue('count'))
+      ->set('world.count', $form_state->getValue('count'))
+      ->set('world.countries', $form_state->getValue('countries'))
       ->save();
     parent::submitForm($form, $form_state);
   }
