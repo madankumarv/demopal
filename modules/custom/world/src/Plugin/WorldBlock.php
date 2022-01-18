@@ -31,4 +31,21 @@ class WorldSearchBlock extends BlockBase {
     return AccessResult::allowedIfHasPermission($account, 'access content');
   }
   
+   /**
+   * {@inheritdoc}
+   */
+  public function blockForm($form, FormStateInterface $form_state) {
+    $form = parent::blockForm($form, $form_state);
+    $config = $this->getConfiguration();
+    return $form;
+  }
+  
+   /**
+   * {@inheritdoc}
+   */
+  public function blockSubmit($form, FormStateInterface $form_state) {
+    $this->setConfigurationValue('world_block_settings', $form_state->getValue('world_block_settings'));
+  }
+
+}
   
