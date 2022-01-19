@@ -6,10 +6,10 @@ dependencies:
   enforced:
     module:
       - world
-name: Country
-type: country
-description: 'Use <em>country</em> to get country informations in details.'
+name: Language
+type: language
+description: 'Use <em>Language</em> to get/set informations about it.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
 display_submitted: true
