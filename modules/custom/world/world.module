@@ -4,3 +4,4 @@ function world_element_info_alter(array &$types) {
     $types['table']['#attached']['library'][] = 'world/standard-lib';
   }
 }
+?>
