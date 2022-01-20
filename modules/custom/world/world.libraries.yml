@@ -1,10 +1,10 @@
-standard-lib:
+default-lib:
   version: 1.x
   css:
     layout:
-      css/world-layout.css: {}
+      css/default-layout.css: {}
     theme:
-      css/world-theme.css: {}
+      css/default-theme.css: {}
   js:
-    js/world-script.js: {}
+    js/default-script.js: {}
     
