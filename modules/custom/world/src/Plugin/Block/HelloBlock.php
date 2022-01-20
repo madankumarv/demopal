@@ -61,7 +61,7 @@ class HelloBlock extends BlockBase {
   public function blockSubmit($form, FormStateInterface $form_state) {
     parent::blockSubmit($form, $form_state);
     $values = $form_state->getValues();
-    $this->configuration['hello_block_name'] = $form_state->getValue(['myfieldset', 'hello_block_name']);
+    $this->configuration['hello_block_name'] = $form_state->getValue('hello_block_name');
   }
 
 /**
