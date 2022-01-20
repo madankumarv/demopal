@@ -1,7 +1,6 @@
 <?php
-function world_element_info_alter(array &$types) {
-  if (isset($types['table'])) {
-    $types['table']['#attached']['library'][] = 'world/world';
-  }
+function world_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'world/standard-lib';
+  $attachments['#attached']['drupalSettings']['example']['foo'] = 'bar';
 }
 ?>
