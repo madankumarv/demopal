@@ -25,8 +25,7 @@ class HelloBlock extends BlockBase {
     ];
   }
 
-}
-
+  
 /**
    * {@inheritdoc}
    */
@@ -62,3 +61,5 @@ class HelloBlock extends BlockBase {
       $form_state->setErrorByName('hello_block_name', $this->t('You can not say hello to John.'));
     }
   }
+
+}
