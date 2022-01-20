@@ -1,0 +1,10 @@
+world-lib:
+  version: 1.x
+  css:
+    layout:
+      css/world-layout.css: {}
+    theme:
+      css/world-theme.css: {}
+  js:
+    js/world-script.js: {}
+    
