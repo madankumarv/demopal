@@ -1,7 +1,7 @@
 <?php
 function world_element_info_alter(array &$types) {
   if (isset($types['table'])) {
-    $types['table']['#attached']['library'][] = 'world/standard-lib';
+    $types['table']['#attached']['library'][] = 'world/world';
   }
 }
 ?>
