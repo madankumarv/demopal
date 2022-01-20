@@ -1,4 +1,4 @@
-world-lib:
+standard-lib:
   version: 1.x
   css:
     layout:
