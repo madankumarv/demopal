@@ -1,6 +1,6 @@
 <?php
 function world_page_attachments(array &$attachments) {
-  $attachments['#attached']['library'][] = 'world/standard-lib';
+  $attachments['#attached']['library'][] = 'world/default-lib';
   $attachments['#attached']['drupalSettings']['example']['foo'] = 'bar';
 }
 ?>
