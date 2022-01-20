@@ -28,7 +28,7 @@ class WorldForm extends FormBase {
     $form['actions']['#type'] = 'actions';
     $form['actions']['submit'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Save'),
+      '#value' => $this->t('Search'),
       '#button_type' => 'primary',
     ];
     return $form;
