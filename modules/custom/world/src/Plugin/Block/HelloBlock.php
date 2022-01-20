@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\hello_world\Plugin\Block;
+namespace Drupal\world\Plugin\Block;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Block\BlockBase;
