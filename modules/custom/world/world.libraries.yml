@@ -4,7 +4,8 @@ default-lib:
     layout:
       css/default-layout.css: {}
     theme:
-      css/default-theme.css: {}
+      css/default-theme.css: { weight: 50 }
+
   js:
     js/default-script.js: {}
     
