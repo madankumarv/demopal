@@ -8,5 +8,12 @@ core_version_requirement: ^8 || ^9
 
 libraries: 
   - world/default-lib
+
+libraries-override: 
+  batrick/global-styling:
+    css:
+      component:
+        /core/themes/bartik/css/components/table.css: false
+
   
 configure: world.config.form
