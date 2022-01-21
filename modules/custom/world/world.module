@@ -3,4 +3,10 @@ function world_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'world/default-lib';
   $attachments['#attached']['drupalSettings']['example']['foo'] = 'bar';
 }
+
+function world_element_info_alter(array &$types) {
+  if (isset($types['table'])) {
+    $types['table']['#attached']['library'][] = 'world/default-lib';
+  }
+}
 ?>
