@@ -13,7 +13,7 @@ libraries-override:
   bartik/global-styling:
     css:
       component:
-        /core/themes/bartik/css/components/table.css: false
+        css/components/table.css: css/default-theme.css
 
   
 configure: world.config.form
