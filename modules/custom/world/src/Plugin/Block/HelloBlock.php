@@ -68,8 +68,8 @@ class HelloBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function blockValidate($form, FormStateInterface $form_state) {
-    if ($form_state->getValue('hello_block_name') === 'Pakistan') {
-      $form_state->setErrorByName('hello_block_name', $this->t('You can not say hello to Pakistan.'));
+    if ($form_state->getValue('hello_block_name') === 'World') {
+      $form_state->setErrorByName('hello_block_name', $this->t('You can not say hello to World.'));
     }
   }
 
