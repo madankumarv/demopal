@@ -10,7 +10,7 @@ libraries:
   - world/default-lib
 
 libraries-override: 
-  batrick/global-styling:
+  bartik/global-styling:
     css:
       component:
         /core/themes/bartik/css/components/table.css: false
